@@ -1,51 +1,35 @@
-let username = document.getElementById('username')
-let password = document.getElementById('password')
-const btn = document.getElementById('btn')
-const murid = document.getElementById('murid')
-const guru = document.getElementById('guru')
-const admin = document.getElementById('admin')
-const tdkTerdaftar = document.getElementById('tidak-terdaftar')
-const kata = document.getElementById('login')
-const klikLogout = document.getElementById('logout')
-const kembali = document.getElementById('kembali')
+function saklar(){
+    let toggle1 = document.getElementById('toggle1')
+    let toggle2 = document.getElementById('toggle2')
+    let toggle3 = document.getElementById('toggle3')
+    let toggle4 = document.getElementById('toggle4')
+    let toggle5 = document.getElementById('toggle5')
+    let toggle6 = document.getElementById('toggle6')
+    let toggle7 = document.getElementById('toggle7')
+    let toggle8 = document.getElementById('toggle8')
+    let toggle9 = document.getElementById('toggle9')
+    let toggle10 = document.getElementById('toggle10')
+  
 
-murid.style.display='none'
-guru.style.display='none'
-admin.style.display='none'
-tdkTerdaftar.style.display='none'
-klikLogout.style.display='none'
-kembali.style.display='none'
+    let lampu1 = document.getElementById('lampu1')
+    let lampu2 = document.getElementById('lampu2')
+    let lampu3 = document.getElementById('lampu3')
+    let lampu4 = document.getElementById('lampu4')
+    let lampu5 = document.getElementById('lampu5')
+    let lampu6 = document.getElementById('lampu6')
+    let lampu7 = document.getElementById('lampu7')
+    let lampu8 = document.getElementById('lampu8')
+    let lampu9 = document.getElementById('lampu9')
+    let lampu10 = document.getElementById('lampu10')
 
-localStorage.setItem('hazza','123')
-localStorage.setItem('wahyu','111')
-localStorage.setItem('admin','admin123')
-
-function klik(){
-    btn.style.display= 'none';
-    username.style.display='none'
-    password.style.display='none'
-    kata.style.display='none'
-
-    if(username.value=='hazza' && password.value=='123'){
-        murid.style.display='block'
-        klikLogout.style.display='block'
-    }else if(username.value=='wahyu' && password.value=='111'){
-        guru.style.display='block'
-        klikLogout.style.display='block'
-    }
-    else if(username.value=='admin' && password.value=='admin123'){
-        admin.style.display='block'
-        klikLogout.style.display='block'
-    }else{
-        tdkTerdaftar.style.display='block'
-        kembali.style.display='block'
-    }
-
+   toggle1.checked ? lampu1.src= 'assets/img/on.gif' :  lampu1.src= 'assets/img/off.gif';
+   toggle2.checked ? lampu2.src= 'assets/img/on.gif' :  lampu2.src= 'assets/img/off.gif';
+   toggle3.checked ? lampu3.src= 'assets/img/on.gif' :  lampu3.src= 'assets/img/off.gif';
+   toggle4.checked ? lampu4.src= 'assets/img/on.gif' :  lampu4.src= 'assets/img/off.gif';
+   toggle5.checked ? lampu5.src= 'assets/img/on.gif' :  lampu5.src= 'assets/img/off.gif';
+   toggle6.checked ? lampu6.src= 'assets/img/on.gif' :  lampu6.src= 'assets/img/off.gif';
+   toggle7.checked ? lampu7.src= 'assets/img/on.gif' :  lampu7.src= 'assets/img/off.gif';
+   toggle8.checked ? lampu8.src= 'assets/img/on.gif' :  lampu8.src= 'assets/img/off.gif';
+   toggle9.checked ? lampu9.src= 'assets/img/on.gif' :  lampu9.src= 'assets/img/off.gif';
+   toggle10.checked ? lampu10.src= 'assets/img/on.gif' :  lampu10.src= 'assets/img/off.gif';
 }
-
-
-function logout(){
-    localStorage.clear();
-    location.reload();
-}
-
